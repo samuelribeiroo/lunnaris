@@ -10,6 +10,8 @@ export default function HeroSection() {
 	return (
 		<section className="w-full relative flex flex-col items-center justify-center px-4 md:px-0 py-8">
 			<Wrapper>
+				<div className="absolute inset-0 dark:bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] -z-10 h-[150vh]" />{" "}
+				<div className="absolute inset-0 dark:bg-[linear-gradient(to_right,#e2e8f0_1px,transparent_1px),linear-gradient(to_bottom,#e2e8f0_1px,transparent_1px)] bg-[linear-gradient(to_right,#161616_1px,transparent_1px),linear-gradient(to_bottom,#161616_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_110%)] -z-10 h-[150vh]" />
 				<Container>
 					<div className="flex flex-col items-center justify-center w-full">
 						<button
@@ -65,7 +67,7 @@ export default function HeroSection() {
 						<div className="relative flex items-center py-10 md:py-20 w-full container mx-auto">
 							{/* biome-ignore lint/style/useSelfClosingElements: <explanation> */}
 							<div className="absolute top-1/2 left-1/2 -z10 gradient  w-3/4 -translate-x-1/2 -translate-y-1/2 h-3/4 inset-0 blur-[10rem]"></div>
-							<div className="-m-2 md:-m-4 rounded-xl p-2 ring-inset ring-inset ring-foreground/20 lg:rounded-2xl bg-opacity-50 background-blur-lg">
+							<div className="-m-2 rounded-xl p-2 ring-1 ring-inset ring-foreground/20 lg:-m-4 lg:rounded-2xl bg-opacity-50 backdrop-blur-3xl">
 								<Image
 									src="/assets/dashboard.svg"
 									width={1200}
@@ -81,5 +83,5 @@ export default function HeroSection() {
 				</Container>
 			</Wrapper>
 		</section>
-	)
+	);
 }
