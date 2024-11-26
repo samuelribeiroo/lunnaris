@@ -3,8 +3,8 @@ import {clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server'
 
 const setHomeRoute = createRouteMatcher(['/'])
 
-export default clerkMiddleware((auth, request) => {
-  const {userId} = auth()
+export default clerkMiddleware(async (auth, request) => {
+  const { userId} = await auth()
 
   if(userId && setHomeRoute(request)) {
     return NextResponse.rewrite(new URL('/', request.url))
